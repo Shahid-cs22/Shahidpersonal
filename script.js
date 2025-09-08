@@ -38,3 +38,7 @@ $(document).ready(function(){
    
 });
   
+let btn = document.getElementById("btn");
+btn.addEventListener("click", function(){
+    window.alert("Your Request Has Been Sent")
+});
