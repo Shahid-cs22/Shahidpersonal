@@ -1,44 +1,49 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
-    $('#menu').click(function(){
+    $('#menu').click(function () {
         $(this).toggleClass('fa-bars');
         $('header').toggleClass('toggle');
     });
 
-    $(window).on('scroll load',function(){
+    $(window).on('scroll load', function () {
 
         $('#menu').removeClass('fa-bars');
         $('header').removeClass('toggle');
 
-        if($(window).scrollTop() > 0){
-           
+        if ($(window).scrollTop() > 0) {
+
             $('.top').show();
-        }else{ 
-            $('.top').hide(); 
+        } else {
+            $('.top').hide();
             $('#menu').addClass('fa-bars');
 
         }
-    });   
+    });
 
-    $('a[href*="#"]').on('click',function(e){
+    $('a[href*="#"]').on('click', function (e) {
 
         e.preventDefault();
 
         $('html, body').animate({
-            
-            scrollTop : $($(this).attr('href')).offset().top,
+
+            scrollTop: $($(this).attr('href')).offset().top,
         },
-        500,
-        'linear'
-         
+            500,
+            'linear'
+
         );
 
 
     });
-   
+
 });
-  
+
 let btn = document.getElementById("btn");
-btn.addEventListener("click", function(){
-    window.alert("Your Request Has Been Sent")
+btn.addEventListener("click", (e) => {
+
+
+    e.preventDefault();
+    btn.innerText = "Sent ✔";
+
+
 });

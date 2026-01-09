@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root{
-    --yellow:#f9ca24;
+    --yellow:hwb(342 23% 29%);
+        /* --yellow:#f9ca24; */
+
 }
 *{
     font-family:'Nunito',sans-serif;
@@ -181,6 +183,7 @@ header .navbar ul li a:hover{
     font-size:2rem;
     color: #eee;
     padding: 1rem 0;
+    text-align: justify;
 }
 
 .about .row{
